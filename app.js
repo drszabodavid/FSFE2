@@ -2,6 +2,10 @@ const express = require("express");
 const app = express();
 const port = 4000;
 
+app.get("/", (req, res) => {
+  res.send("Nice work David!");
+});
+
 app.get("/teapot", (req, res) => {
   res.set("X-full-stack", "4life");
   res.statusMessage(418);
